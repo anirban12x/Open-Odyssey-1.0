@@ -39,7 +39,7 @@ const Workflow = () => {
         `https://api.github.com/repos/${owner}/${repo}/pulls?state=closed&base=main&per_page=100`,
         { headers: { Authorization: `token ${token}` } }
       );
-
+      
       const prsResponsePage2 = await axios.get(
         `https://api.github.com/repos/${owner}/${repo}/pulls?state=closed&base=main&per_page=100&page=2`,
         { headers: { Authorization: `token ${token}` } }
